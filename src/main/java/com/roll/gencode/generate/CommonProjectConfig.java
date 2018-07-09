@@ -39,6 +39,8 @@ class CommonProjectConfig {
 
 	static String packageName;
 
+	private static String propertisePath = "genConfig.properties";
+
 	/**
 	 * 加载配置文件
 	 *
@@ -48,7 +50,7 @@ class CommonProjectConfig {
 		Properties prop;
 		try {
 			prop = new Properties();
-			InputStream in = CommonProjectConfig.class.getClassLoader().getResourceAsStream("genConfig.properties");
+			InputStream in = CommonProjectConfig.class.getClassLoader().getResourceAsStream(propertisePath);
 			prop.load(in);
 		} catch (Exception e) {
 			throw new RuntimeException("加载配置文件异常!", e);
@@ -68,5 +70,13 @@ class CommonProjectConfig {
 		jdbcUser = prop.getProperty("jdbc.username");
 		jdbcPassword = prop.getProperty("jdbc.password");
 		jdbcDriver = prop.getProperty("jdbc.driver.class.name");
+	}
+
+	public String getPropertisePath() {
+		return propertisePath;
+	}
+
+	public void setPropertisePath(String propertisePath) {
+		this.propertisePath = propertisePath;
 	}
 }

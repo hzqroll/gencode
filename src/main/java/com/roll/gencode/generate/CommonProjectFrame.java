@@ -16,7 +16,6 @@ import org.springframework.util.StringUtils;
 
 import com.google.common.base.CaseFormat;
 import com.roll.gencode.util.GenerateUtil;
-import freemarker.template.utility.StringUtil;
 
 /**
  * @author haozq
@@ -83,8 +82,7 @@ public class CommonProjectFrame extends CommonProjectConfig {
 		}
 		modelData.setTargetName(targetName);
 
-		String modelDir = userDir + resourcesPath + "/model";
-		modelData.setModelDir(modelDir);
+		modelData.setModelDir(userDir + modelDir);
 
 		String modelName = targetModel + ".ftl";
 		modelData.setModelName(modelName);
@@ -110,8 +108,7 @@ public class CommonProjectFrame extends CommonProjectConfig {
 		String targetName = captureName(materialName) + captureName(targetModel) + ".xml";
 		modelData.setTargetName(targetName);
 
-		String modelDir = userDir + resourcesPath + "/model";
-		modelData.setModelDir(modelDir);
+		modelData.setModelDir(userDir + modelDir);
 
 		String modelName = targetModel + ".ftl";
 		modelData.setModelName(modelName);
