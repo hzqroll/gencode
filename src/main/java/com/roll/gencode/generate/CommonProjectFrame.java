@@ -205,12 +205,6 @@ public class CommonProjectFrame extends CommonProjectConfig {
 		CommonProjectFrame.tableList.addAll(tableList);
 	}
 
-	public static void main(String args[]) {
-		CommonProjectFrame commonProjectFrame = new CommonProjectFrame();
-		commonProjectFrame.genMapper();
-		commonProjectFrame.genJava();
-	}
-
 	/**
 	 * 转换a.b.c成/a/b/c
 	 */
@@ -281,5 +275,11 @@ public class CommonProjectFrame extends CommonProjectConfig {
 	 */
 	private static String convertName(String columnName) {
 		return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, columnName.toLowerCase());
+	}
+
+	public static void main(String args[]) {
+		CommonProjectFrame commonProjectFrame = new CommonProjectFrame();
+		commonProjectFrame.genMapper();
+		commonProjectFrame.genJava();
 	}
 }

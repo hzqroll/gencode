@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * Date: 2018/7/9 上午9:09
  */
 class CommonProjectConfig {
-	public static Logger LOG = LoggerFactory.getLogger("CREATE_PROJECT_FRAME_LOG");
+	static Logger LOG = LoggerFactory.getLogger("CREATE_PROJECT_FRAME_LOG");
 	/**
 	 * 项目目录
 	 */
