@@ -1,17 +1,17 @@
-package ${packageName};
+package ${packageName}.service;
 
 import ${packageName}.pojo.${materialName?cap_first};
 
 /**
- *  Automatic generated sample interface for ${materialName?cap_first}
+ * 自动生成的Service层接口
  *
- *  @author ${author}
- *  Date: ${date}
+ * @author ${author}
+ * Date: ${date}
  */
-public interface ${materialName?cap_first}Dao {
+public interface ${materialName?cap_first}Service {
 
     /**
-     * return {@link ${materialName?cap_first}}
+     * 返回查询出的 {@link ${materialName?cap_first}}
      *
      * @param id 主键ID
      * @return {@link ${materialName?cap_first}}
@@ -19,7 +19,7 @@ public interface ${materialName?cap_first}Dao {
     ${materialName?cap_first} get(long id);
 
     /**
-     * return auto generate id
+     * 返回插入生成的主键ID
      *
      * @param ${materialName?uncap_first} ${materialName?uncap_first}
      * @return id
@@ -27,7 +27,7 @@ public interface ${materialName?cap_first}Dao {
     long add(${materialName?cap_first} ${materialName?uncap_first});
 
     /**
-     * return delete amount
+     * 返回删除的行数
      *
      * @param id 主键ID
      * @return delete amount
@@ -35,7 +35,7 @@ public interface ${materialName?cap_first}Dao {
     int delete(long id);
 
     /**
-     * return update amount
+     * 返回更新的行数
      *
      * @param ${materialName?uncap_first} ${materialName?uncap_first}
      * @return update amount

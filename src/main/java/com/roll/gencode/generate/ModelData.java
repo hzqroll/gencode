@@ -6,8 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import com.sun.istack.internal.NotNull;
-
 /**
  * Created by haozq
  * Date: 2018/7/3 上午10:59
@@ -37,25 +35,21 @@ public class ModelData {
 	/**
 	 * model文件目录
 	 */
-	@NotNull
 	private String modelDir;
 
 	/**
 	 * model名称
 	 */
-	@NotNull
 	private String modelName;
 
 	/**
 	 * 需要创建的文件目录
 	 */
-	@NotNull
 	private String targetDir;
 
 	/**
 	 * 需要创建的文件名
 	 */
-	@NotNull
 	private String targetName;
 
 	/**
@@ -85,7 +79,6 @@ public class ModelData {
 	 * <P>比如：abc，创建service的时候类名为AbcService；
 	 * <p>默认首字母大写，末尾加上对应模块信息
 	 */
-	@NotNull
 	private String materialName;
 
 	private List<Model> models = new ArrayList<>();
@@ -94,6 +87,8 @@ public class ModelData {
 	 * 具体内容
 	 */
 	private Map<String, Object> params;
+
+	private String tableName;
 
 	public String getModelDir() {
 		return modelDir;
@@ -181,6 +176,14 @@ public class ModelData {
 
 	public void setPackageName(String packageName) {
 		this.packageName = packageName;
+	}
+
+	public String getTableName() {
+		return tableName;
+	}
+
+	public void setTableName(String tableName) {
+		this.tableName = tableName;
 	}
 
 	/**

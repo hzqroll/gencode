@@ -1,6 +1,6 @@
 package ${packageName}.pojo;
 
-import java.util.List;
+import java.util.Date;
 
 /**
  *  Automatic generated sample interface for ${materialName}
@@ -29,7 +29,7 @@ public class ${materialName?cap_first} {
     }
 
     /**
-     * 获取 ${model.desc}
+     * 获取${model.desc}
      *
      * @return 返回${model.name}
      */
